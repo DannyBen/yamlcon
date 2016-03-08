@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.name        = 'yamlcon'
   s.version     = YAMLCon::VERSION
   s.date        = Date.today.to_s
-  s.summary     = "Load YAML as configuration file"
+  s.summary     = "YAML Config Loader"
   s.description = "Utility for easily loading YAML files as configuration objects"
   s.authors     = ["Danny Ben Shitrit"]
   s.email       = 'db@dannyben.com'
