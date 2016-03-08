@@ -1,9 +1,9 @@
 require "run-gem-dev"
 include Runfile::Exec
 
-name     "YAML Conf Dev Tools"
+name     "YAMLCon Dev Tools"
 summary  "Utilities for the gem developer"
-version  YAMLConf::VERSION
+version  YAMLCon::VERSION
 
-RunGemDev::gem_tasks 'yaml_conf'
+RunGemDev::gem_tasks 'yamlcon'
 RunGemDev::rspec_tasks

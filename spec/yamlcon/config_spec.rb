@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "yaml-config" do
+describe "yamlcon" do
 
   before do
     @config = YAML.load_config 'spec/fixtures/config.yml'
