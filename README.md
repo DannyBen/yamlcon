@@ -6,14 +6,10 @@ A utility for loading YAML files as first class configuration objects.
 Install
 --------------------------------------------------
 
-```shell
-$ gem install yaml_config
-```
-
-or add to your gemfile
+Add to your gemfile
 
 ```ruby
-gem 'yaml_config'
+gem 'yaml_conf'
 ```
 
 Usage

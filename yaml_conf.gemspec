@@ -1,9 +1,9 @@
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'yaml_config/version'
+require 'yaml-config/version'
 
 Gem::Specification.new do |s|
-  s.name        = 'yaml_config'
+  s.name        = 'yaml-config'
   s.version     = YAMLConfig::VERSION
   s.date        = Date.today.to_s
   s.summary     = "Load YAML as configuration file"

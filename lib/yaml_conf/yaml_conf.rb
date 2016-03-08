@@ -1,7 +1,7 @@
 require 'yaml'
 require 'ostruct'
 
-module YAMLConfig
+module YAMLConf
   def self.load_config(file)
     hash = YAML.load_file file
     dot_notation_from hash
