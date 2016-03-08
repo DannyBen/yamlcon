@@ -1,0 +1,9 @@
+require "run-gem-dev"
+include Runfile::Exec
+
+name     "YAML Config  Dev Tools"
+summary  "Utilities for the gem developer"
+version  YAMLConfig::VERSION
+
+RunGemDev::gem_tasks 'yaml_config'
+RunGemDev::rspec_tasks
