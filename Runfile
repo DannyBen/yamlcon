@@ -3,7 +3,7 @@ include Runfile::Exec
 
 name     "YAML Conf Dev Tools"
 summary  "Utilities for the gem developer"
-version  YAMLConfig::VERSION
+version  YAMLConf::VERSION
 
 RunGemDev::gem_tasks 'yaml_conf'
 RunGemDev::rspec_tasks
