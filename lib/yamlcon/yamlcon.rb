@@ -7,8 +7,6 @@ module YAMLCon
     dot_notation_from hash
   end
 
-  private 
-
   def self.dot_notation_from(hash)
     dotted = OpenStruct.new hash
     hash.each do |k, v| 
