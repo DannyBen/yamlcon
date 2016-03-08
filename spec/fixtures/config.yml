@@ -1,0 +1,20 @@
+weapon: Handheld Portal Device
+
+items:
+  weighted_companion_cube: 2
+  edgeless_companion_cube: 1
+
+turrets:
+  - sentry
+  - defective
+  - prima dona
+  - frankenturret
+
+glados:
+  texts:
+    during_escape: 
+      - "Is anyone there?"
+      - "You're not even going the right way"
+      - "You haven't escaped, you know."
+
+"emancipation grill": "yes please"

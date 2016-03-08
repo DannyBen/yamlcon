@@ -9,7 +9,7 @@ module YAMLConfig
 
   private 
 
-  def dot_notation_from(hash)
+  def self.dot_notation_from(hash)
     dotted = OpenStruct.new hash
     hash.each do |k, v| 
       dotted[k] = dot_notation_from(v) if v.is_a? Hash
