@@ -8,7 +8,7 @@ YAMLCon - YAML Config Loader
 
 --------------------------------------------------
 
-A utility for loading YAML files as first class configuration objects.
+A utility for loading and saving YAML files with dot.notation.
 
 Install
 --------------------------------------------------
@@ -23,6 +23,11 @@ Usage
 --------------------------------------------------
 
 ```ruby
+# Load
 config = YAML.load_config 'path/to/config.yml'
 puts config.any_option.or_nested
+
+# Modify and save
+config.some_setting = 'value'
+YAML.save_config 'filename.yml', config
 ```
