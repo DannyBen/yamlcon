@@ -1,5 +1,7 @@
 .bundle
 Gemfile.lock
 
+/dev
 /gems
 /coverage
+tmp.yml
