@@ -2,7 +2,9 @@ require 'spec_helper'
 
 describe "yamlcon" do
 
-  let(:config) { YAML.load_config 'spec/fixtures/config.yml' }
+  let :config do
+    YAML.load_config 'spec/fixtures/config.yml'
+  end
 
   it "should load as OpenStruct" do
     expect(config).to be_kind_of OpenStruct
@@ -10,6 +12,14 @@ describe "yamlcon" do
 
   it "should allow access with accessor" do
     expect(config.weapon).to eq 'Handheld Portal Device'
+  end
+
+  it "should allow access with []" do
+    expect(config["weapon"]).to eq 'Handheld Portal Device'
+  end
+
+  it "should allow access with spaces" do
+    expect(config["emancipation grill"]).to eq 'yes please'
   end
 
   it "should load nested options" do
@@ -31,14 +41,8 @@ describe "yamlcon" do
   end
 
   context "on missing options" do
-    it "should not panic" do
+    it "should not raise exception" do
       expect(config.hello_are_you_there).to be nil
-    end
-  end
-
-  context "on options with spaces" do
-    it "should not panic" do
-      expect(config["emancipation grill"]).to eq 'yes please'
     end
   end
 
