@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "yamlcon" do
+describe YAMLCon do
 
   let :config do
     YAML.load_config 'spec/fixtures/config.yml'
@@ -30,6 +30,12 @@ describe "yamlcon" do
   it "should load deeply nested options" do
     expect(config.glados.texts.during_escape).to be_kind_of Array
     expect(config.glados.texts.during_escape[0]).to eq "Is anyone there?"
+  end
+
+  it "should load array of key value pairs" do
+    expect(config.gels).to be_kind_of Array
+    expect(config.gels.first).to be_kind_of OpenStruct
+    expect(config.gels.first.color).to eq "blue"
   end
 
   it "should save" do

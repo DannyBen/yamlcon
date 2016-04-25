@@ -17,4 +17,10 @@ glados:
       - "You're not even going the right way"
       - "You haven't escaped, you know."
 
+gels:
+  - color: blue
+    effect: repulsion
+  - color: orange
+    effect: propulsion
+
 "emancipation grill": "yes please"

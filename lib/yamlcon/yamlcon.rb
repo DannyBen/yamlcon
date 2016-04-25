@@ -14,10 +14,17 @@ module YAMLCon
   end
 
   def self.hash_to_struct(hash)
+    return hash unless hash.is_a? Hash
     dotted = OpenStruct.new hash
-    hash.each do |k, v| 
-      dotted[k] = hash_to_struct(v) if v.is_a? Hash
+
+    hash.each do |key, value| 
+      if value.is_a? Hash
+        dotted[key] = hash_to_struct(value) 
+      elsif value.is_a? Array
+        dotted[key] = value.collect {|item| hash_to_struct item }
+      end
     end
+
     dotted
   end
 
