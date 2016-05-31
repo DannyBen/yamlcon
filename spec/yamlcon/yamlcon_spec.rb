@@ -6,39 +6,45 @@ describe YAMLCon do
     YAML.load_config 'spec/fixtures/config.yml'
   end
 
-  it "should load as OpenStruct" do
+  it "loads as OpenStruct" do
     expect(config).to be_kind_of OpenStruct
   end
 
-  it "should allow access with accessor" do
+  it "allows access with accessor" do
     expect(config.weapon).to eq 'Handheld Portal Device'
   end
 
-  it "should allow access with []" do
+  it "allows access with []" do
     expect(config["weapon"]).to eq 'Handheld Portal Device'
   end
 
-  it "should allow access with spaces" do
+  it "allows access with spaces" do
     expect(config["emancipation grill"]).to eq 'yes please'
   end
 
-  it "should load nested options" do
+  it "loads nested options" do
     expect(config.items).to be_kind_of OpenStruct
     expect(config.items.weighted_companion_cube).to eq 2
   end
 
-  it "should load deeply nested options" do
+  it "loads deeply nested options" do
     expect(config.glados.texts.during_escape).to be_kind_of Array
     expect(config.glados.texts.during_escape[0]).to eq "Is anyone there?"
   end
 
-  it "should load array of key value pairs" do
+  it "loads array of key value pairs" do
     expect(config.gels).to be_kind_of Array
     expect(config.gels.first).to be_kind_of OpenStruct
     expect(config.gels.first.color).to eq "blue"
   end
 
-  it "should save" do
+  it "loads multiple files" do
+    config = YAML.load_config 'spec/fixtures/*.yml'
+    expect(config.config.weapon).to eq 'Handheld Portal Device'
+    expect(config.another.three).to eq 'five'
+  end
+
+  it "saves" do
     config.items.portal_gun = 1
     YAML.save_config 'tmp.yml', config
     config = YAML.load_config 'tmp.yml'
@@ -46,8 +52,8 @@ describe YAMLCon do
     expect(config.items.weighted_companion_cube).to eq 2
   end
 
-  context "on missing options" do
-    it "should not raise exception" do
+  context "with missing options" do
+    it "does not raise exception" do
       expect(config.hello_are_you_there).to be nil
     end
   end
