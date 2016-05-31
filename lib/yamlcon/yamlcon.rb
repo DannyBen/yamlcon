@@ -2,9 +2,17 @@ require 'yaml'
 require 'ostruct'
 
 module YAMLCon
-  def self.load_config(file)
-    hash = YAML.load_file file
-    hash_to_struct hash
+  def self.load_config(path)
+    if path.include? "*"
+      result = OpenStruct.new
+      Dir[path].each do |file|
+        basename = File.basename(file).sub(/\..*/, '')
+        result[basename] = hash_to_struct YAML.load_file(file)
+      end
+      result
+    else
+      hash_to_struct YAML.load_file(path)
+    end
   end
 
   def self.save_config(file, data)
@@ -29,9 +37,19 @@ module YAMLCon
   end
 
   def self.struct_to_hash(dot_notation)
+    return dot_notation unless dot_notation.is_a? OpenStruct
+
     hash = {}
     dot_notation.each_pair do |k, v| 
-      hash[k.to_s] = v.is_a?(OpenStruct) ? struct_to_hash(v) : v
+      if v.is_a? OpenStruct
+        value = struct_to_hash(v) 
+      elsif v.is_a? Array
+        value = v.map { |val| struct_to_hash val }
+      else
+        value = v
+      end
+
+      hash[k.to_s] = value
     end
     hash
   end
