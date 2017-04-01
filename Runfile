@@ -1,7 +1,7 @@
 require "runfile-tasks"
 require_relative 'lib/yamlcon'
 
-name     "YAMLCon Dev Tools"
+title    "YAMLCon Dev Tools"
 summary  "Utilities for the gem developer"
 version  YAMLCon::VERSION
 
