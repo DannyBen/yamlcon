@@ -4,8 +4,8 @@ YAMLCon - YAML Config Loader
 [![Gem](https://img.shields.io/gem/v/yamlcon.svg?style=flat-square)](https://rubygems.org/gems/yamlcon)
 [![Travis](https://img.shields.io/travis/DannyBen/yamlcon.svg?style=flat-square)](https://travis-ci.org/DannyBen/yamlcon)
 [![Maintainability](https://img.shields.io/codeclimate/maintainability/DannyBen/yamlcon.svg?style=flat-square)](https://codeclimate.com/github/DannyBen/yamlcon)
-[![Issues](https://img.shields.io/codeclimate/issues/github/DannyBen/yamlcon.svg?style=flat-square)](https://codeclimate.com/github/DannyBen/yamlcon)
-[![Gemnasium](https://img.shields.io/gemnasium/DannyBen/yamlcon.svg?style=flat-square)](https://gemnasium.com/DannyBen/yamlcon)
+[![Issues](https://img.shields.io/codeclimate/issues/DannyBen/yamlcon.svg?style=flat-square)](https://codeclimate.com/github/DannyBen/yamlcon)
+[![Dependencies](https://img.shields.io/gemnasium/DannyBen/yamlcon.svg?style=flat-square)](https://gemnasium.com/DannyBen/yamlcon)
 
 --------------------------------------------------
 
