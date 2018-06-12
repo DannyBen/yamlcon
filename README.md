@@ -1,9 +1,10 @@
 YAMLCon - YAML Config Loader
 ==================================================
 
-[![Gem](https://img.shields.io/gem/v/yamlcon.svg?style=flat-square)](https://rubygems.org/gems/yamlcon)
-[![Travis](https://img.shields.io/travis/DannyBen/yamlcon.svg?style=flat-square)](https://travis-ci.com/DannyBen/yamlcon)
-[![Maintainability](https://img.shields.io/codeclimate/maintainability/DannyBen/yamlcon.svg?style=flat-square)](https://codeclimate.com/github/DannyBen/yamlcon)
+[![Gem Version](https://badge.fury.io/rb/yamlcon.svg)](https://badge.fury.io/rb/yamlcon)
+[![Build Status](https://travis-ci.com/DannyBen/yamlcon.svg?branch=master)](https://travis-ci.com/DannyBen/yamlcon)
+[![Maintainability](https://api.codeclimate.com/v1/badges/532084393e9f979d4381/maintainability)](https://codeclimate.com/github/DannyBen/yamlcon/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/532084393e9f979d4381/test_coverage)](https://codeclimate.com/github/DannyBen/yamlcon/test_coverage)
 
 --------------------------------------------------
 
