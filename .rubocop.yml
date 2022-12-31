@@ -1,0 +1,18 @@
+require:
+  - rubocop-performance
+  - rubocop-rspec
+
+inherit_gem:
+  rentacop:
+    - rentacop.yml
+    - rspec.yml
+
+AllCops:
+  TargetRubyVersion: 2.7
+  Exclude:
+    - debug.rb
+    - dev/**/*
+
+RSpec/FilePath:
+  Exclude:
+    - spec/yamlcon/yamlcon_spec.rb
