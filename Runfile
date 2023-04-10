@@ -1,9 +1,4 @@
-require "runfile-tasks"
-require_relative 'lib/yamlcon'
-
 title    "YAMLCon Dev Tools"
 summary  "Utilities for the gem developer"
-version  YAMLCon::VERSION
 
-RunfileTasks::RubyGems.all 'yamlcon'
-RunfileTasks::Testing.rspec
+import_gem 'runfile-tasks/gem'
