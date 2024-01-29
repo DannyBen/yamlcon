@@ -8,11 +8,15 @@ inherit_gem:
     - rspec.yml
 
 AllCops:
-  TargetRubyVersion: 2.7
+  TargetRubyVersion: 3.0
   Exclude:
     - debug.rb
     - dev/**/*
 
 RSpec/FilePath:
+  Exclude:
+    - spec/yamlcon/yamlcon_spec.rb
+
+RSpec/SpecFilePathFormat:
   Exclude:
     - spec/yamlcon/yamlcon_spec.rb
