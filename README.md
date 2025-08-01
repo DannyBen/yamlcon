@@ -1,12 +1,6 @@
 YAMLCon - YAML Config Loader
 ==================================================
 
-[![Gem Version](https://badge.fury.io/rb/yamlcon.svg)](https://badge.fury.io/rb/yamlcon)
-[![Build Status](https://github.com/DannyBen/yamlcon/workflows/Test/badge.svg)](https://github.com/DannyBen/yamlcon/actions?query=workflow%3ATest)
-[![Maintainability](https://api.codeclimate.com/v1/badges/532084393e9f979d4381/maintainability)](https://codeclimate.com/github/DannyBen/yamlcon/maintainability)
-
----
-
 A utility for loading and saving YAML files with dot.notation.
 
 Install
